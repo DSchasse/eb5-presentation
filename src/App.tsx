@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -74,12 +73,12 @@ export default function EB5PresentationApp() {
   const prev = () => setIndex((i) => (i - 1 + slides.length) % slides.length);
 
   return (
-    <img
-  src="/eb5-logo.png"
-  alt="EB5 Capital Logo"
-  className="w-32 h-auto mb-6"
-/>
-    <div className="min-h-screen bg-[#F4F4F4] text-[#082F49] flex flex-col items-center justify-center px-4">
+    <div className="min-h-screen bg-[#F4F4F4] text-[#082F49] flex flex-col items-center justify-center px-4 relative">
+      <img
+        src="/eb5-logo.png"
+        alt="EB5 Capital Logo"
+        className="w-32 h-auto mb-6 absolute top-6 left-6"
+      />
       <AnimatePresence mode="wait">
         <motion.div
           key={index}
@@ -87,7 +86,7 @@ export default function EB5PresentationApp() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -40 }}
           transition={{ duration: 0.4 }}
-          className="bg-white/70 backdrop-blur-md p-8 rounded-xl shadow-xl max-w-2xl w-full"
+          className="bg-white/70 backdrop-blur-md p-8 rounded-xl shadow-xl max-w-2xl w-full mt-24"
         >
           <h2 className="text-2xl font-semibold mb-4">{slides[index].title}</h2>
           <ul className="list-disc list-inside space-y-2">
