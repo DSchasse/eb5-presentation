@@ -75,9 +75,9 @@ export default function EB5PresentationApp() {
   return (
     <div className="min-h-screen bg-[#F4F4F4] text-[#082F49] flex flex-col items-center justify-center px-4 relative">
       <img
-        src="/eb5-logo.png"
+        src="/eb5-logo.jpeg"
         alt="EB5 Capital Logo"
-        className="w-32 h-auto mb-6 absolute top-6 left-6"
+        className="w-32 h-auto mb-6"
       />
       <AnimatePresence mode="wait">
         <motion.div
