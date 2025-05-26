@@ -74,6 +74,11 @@ export default function EB5PresentationApp() {
   const prev = () => setIndex((i) => (i - 1 + slides.length) % slides.length);
 
   return (
+    <img
+  src="/eb5-logo.png"
+  alt="EB5 Capital Logo"
+  className="w-32 h-auto mb-6"
+/>
     <div className="min-h-screen bg-[#F4F4F4] text-[#082F49] flex flex-col items-center justify-center px-4">
       <AnimatePresence mode="wait">
         <motion.div
